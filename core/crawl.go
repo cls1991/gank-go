@@ -20,7 +20,7 @@ func Extract(url string) ([]string, error) {
 		if !exist {
 			return nil, err
 		}
-		if strings.HasSuffix(val, ".jpg") || strings.HasSuffix(val, ".png") || strings.HasSuffix(val, "jpeg") {
+		if strings.HasSuffix(val, ".jpg") || strings.HasSuffix(val, ".png") || strings.HasSuffix(val, ".jpeg") {
 			links = append(links, val)
 		}
 		// jump to pre page
