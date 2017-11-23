@@ -15,3 +15,7 @@
 
 # GoLand settings
 .idea/
+
+# Golang denpencies
+vendor/
+
