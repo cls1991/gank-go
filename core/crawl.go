@@ -23,12 +23,12 @@ func Extract(url string) ([]string, error) {
 		if strings.HasSuffix(val, ".jpg") || strings.HasSuffix(val, ".png") || strings.HasSuffix(val, ".jpeg") {
 			links = append(links, val)
 		}
-		// jump to pre page
-		pre, exist := doc.Find("[style=\"text-align: right\"]").Find("A").Attr("href")
+		// jump to next page
+		next, exist := doc.Find("[style=\"text-align: right\"]").Find("a").Attr("href")
 		if !exist {
 			break
 		}
-		targetUrl = url + pre
+		targetUrl = url + next
 	}
 	fmt.Println("Done.")
 
